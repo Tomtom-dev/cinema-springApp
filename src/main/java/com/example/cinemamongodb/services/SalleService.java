@@ -9,8 +9,8 @@ import java.util.List;
 public interface SalleService {
     public List<Salle> findAll();
 
-    public Salle salle (Salle salle);
+    public Salle save (Salle salle);
 
-    List<Salle> getSalle(String id);
+    List<Seance> getSalle(String id);
 
 }

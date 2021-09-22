@@ -20,8 +20,8 @@ public class AppConfig {
         return new SeanceServiceImpl(seanceRepository);
     }
 
-    @Bean
-    public SalleService salleService (SalleRepository salleRepository){
-        return new SalleServiceImpl(salleRepository);
-    }
+//    @Bean
+//    public SalleService salleService (SalleRepository salleRepository){
+//        return new SalleServiceImpl(salleRepository);
+//    }
 }
