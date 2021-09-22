@@ -1,11 +1,37 @@
 package com.example.cinemamongodb.controllers;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.example.cinemamongodb.models.Film;
+import com.example.cinemamongodb.models.Seance;
+import com.example.cinemamongodb.services.SeanceService;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @CrossOrigin
-@RequestMapping("film")
+@RequestMapping("seance")
 public class SeanceController {
+
+    private SeanceService seanceService;
+
+    @Autowired
+    public SeanceController (SeanceService seanceService){
+        this.seanceService=seanceService;
+    }
+
+    @GetMapping
+    public List<Seance> findAll() {
+        return this.seanceService.findAll();
+    }
+
+    @PostMapping
+    public Seance save(@RequestBody Seance seance) {
+        return this.seanceService.save(seance);
+    }
+
+    @GetMapping("/{id}/film")
+    public List<Film> get (@PathVariable String id){
+        return this.seanceService.getSeance(id);
+    }
 }
