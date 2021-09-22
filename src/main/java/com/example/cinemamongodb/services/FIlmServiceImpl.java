@@ -20,7 +20,7 @@ public class FIlmServiceImpl implements FilmService{
 
     @Override
     public Film create(Film film) {
-        return this.filmRepository.save(film)
+        return this.filmRepository.save(film);
     }
 
     @Override
@@ -33,8 +33,8 @@ public class FIlmServiceImpl implements FilmService{
         return this.filmRepository.save(film);
     }
 
-    @Override
-    public List<Film> findByNom(String title) {
-        return this.filmRepository.findByNom(title);
-    }
+//    @Override
+//    public List<Film> findByNom(String title) {
+//        return this.filmRepository.findByNom(title);
+//    }
 }
