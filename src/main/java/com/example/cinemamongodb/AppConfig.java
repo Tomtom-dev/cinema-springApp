@@ -1,11 +1,9 @@
 package com.example.cinemamongodb;
 
 import com.example.cinemamongodb.repositories.FilmRepository;
+import com.example.cinemamongodb.repositories.SalleRepository;
 import com.example.cinemamongodb.repositories.SeanceRepository;
-import com.example.cinemamongodb.services.FIlmServiceImpl;
-import com.example.cinemamongodb.services.FilmService;
-import com.example.cinemamongodb.services.SeanceService;
-import com.example.cinemamongodb.services.SeanceServiceImpl;
+import com.example.cinemamongodb.services.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
@@ -20,5 +18,10 @@ public class AppConfig {
     @Bean
     public SeanceService seanceService (SeanceRepository seanceRepository){
         return new SeanceServiceImpl(seanceRepository);
+    }
+
+    @Bean
+    public SalleService salleService (SalleRepository salleRepository){
+        return new SalleServiceImpl(salleRepository);
     }
 }
