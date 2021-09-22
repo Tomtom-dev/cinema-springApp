@@ -9,5 +9,5 @@ public interface FilmService {
     public void delete(String id);
     public Film putFilm(Film film);
 
-    public List<Film> findByNom(String title);
+    public List<Film> findByTitle(String title);
 }
