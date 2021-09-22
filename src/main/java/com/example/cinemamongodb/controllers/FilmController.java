@@ -29,7 +29,7 @@ public class FilmController {
     }
 
     @DeleteMapping("{id}")
-    public void delete(@RequestParam String id){
+    public void delete( @PathVariable String id){
         this.filmService.delete(id);
     }
 
@@ -38,8 +38,8 @@ public class FilmController {
         return this.filmService.putFilm(film);
     }
 
-//    @GetMapping("{title}")
-//    public List<Film> findByNom(@PathVariable String title){
-//        return this.filmService.findByNom(title);
-//    }
+    @GetMapping("{title}")
+    public List<Film> findByTitle(@PathVariable String title){
+        return this.filmService.findByTitle(title);
+    }
 }

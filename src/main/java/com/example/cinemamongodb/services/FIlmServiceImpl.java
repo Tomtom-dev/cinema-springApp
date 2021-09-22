@@ -33,8 +33,8 @@ public class FIlmServiceImpl implements FilmService{
         return this.filmRepository.save(film);
     }
 
-//    @Override
-//    public List<Film> findByNom(String title) {
-//        return this.filmRepository.findByNom(title);
-//    }
+    @Override
+    public List<Film> findByTitle(String title) {
+        return this.filmRepository.findByTitle(title);
+    }
 }
