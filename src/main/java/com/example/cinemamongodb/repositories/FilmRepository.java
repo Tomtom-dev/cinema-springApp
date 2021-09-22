@@ -1,4 +1,4 @@
 package com.example.cinemamongodb.repositories;
 
-public interface FilmRepository {
+public interface FilmRepository extends  {
 }
